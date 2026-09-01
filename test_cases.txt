@@ -1,0 +1,26 @@
+TEST CASES
+
+Test 1 - Missing soil moisture
+Input: Soil_Moisture_W2 = NA
+Expected: Missing value remains NA during validation and is replaced by the median during imputation.
+Actual: Missing value is replaced by the median soil-moisture reading.
+
+Test 2 - Invalid soil moisture
+Input: Soil_Moisture_W4 = 105
+Expected: Value outside 0-100 is marked NA and then median-imputed.
+Actual: Value is rejected and replaced by the median.
+
+Test 3 - Invalid rainfall
+Input: Rainfall_W3 = -4
+Expected: Negative rainfall is marked NA and then median-imputed.
+Actual: Value is rejected and replaced by the median.
+
+Test 4 - Invalid temperature
+Input: Temperature_W1 = 65
+Expected: Value outside the accepted range is marked NA and then median-imputed.
+Actual: Value is rejected and replaced by the median.
+
+Test 5 - Feature derivation
+Input: Four cleaned weekly soil-moisture readings for a plot.
+Expected: Average_Weekly_Soil_Moisture equals their arithmetic mean.
+Actual: rowMeans() produces the derived feature.
