@@ -1,0 +1,18 @@
+START
+1. Read the wide farm sensor dataset.
+2. Store selected readings as vectors, a list, and a matrix.
+3. Melt weekly soil-moisture columns into tidy long format.
+4. Cast the long data to obtain weekly sensor summaries.
+5. Define a cleaning function using a loop and if-else conditions.
+6. Mark missing or out-of-range sensor values as NA.
+7. Replace remaining missing sensor values with the median.
+8. Compute average weekly soil moisture, average temperature and total rainfall.
+9. Build a normalized data frame containing plot ID, derived sensor features and yield.
+10. Calculate mean, median, mode, range, variance, standard deviation, skewness and kurtosis.
+11. Calculate covariance and correlation between soil moisture and yield.
+12. Create a histogram, box plot and scatter plot.
+13. Fit a multiple linear regression model because yield is continuous.
+14. Evaluate R-squared, adjusted R-squared, residual error and coefficient significance.
+15. Predict yield for a new farm plot.
+16. Save cleaned/derived datasets and output plots.
+END
